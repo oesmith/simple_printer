@@ -10,6 +10,12 @@ the same endpoint.
 __Hint: check the debug output of the device or the sinatra logs to discover
 the IDs/URLs.__
 
+## Example
+
+To push a simple text job:
+
+    curl -D - -X POST --data-binary 'Hello, World!' http://localhost:4567/printer/{PRINTER ID HERE}
+
 ## Further reading
 
 - https://github.com/oesmith/a2_printer
