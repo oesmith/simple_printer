@@ -1,10 +1,11 @@
 GIT
   remote: https://github.com/oesmith/a2_printer.git
-  revision: bf4b8955c3541549468e02c4fe209ea365e364c9
-  branch: rmagick-images
+  revision: 00a12e40ecfe715a469ca5f966b71d084039880e
   specs:
     a2_printer (0.1.0)
       rmagick (~> 2.13.1)
+      rqrencoder (~> 0.1.2)
+      rqrencoder-magick (~> 0.1.0)
       serialport (~> 1.0.4)
 
 GEM
@@ -18,6 +19,10 @@ GEM
       rack
     redis (2.2.2)
     rmagick (2.13.1)
+    rqrencoder (0.1.2)
+    rqrencoder-magick (0.1.0)
+      rmagick (>= 2.13.1)
+      rqrencoder (>= 0.1.2)
     serialport (1.0.4)
     sinatra (1.3.2)
       rack (~> 1.3, >= 1.3.6)
