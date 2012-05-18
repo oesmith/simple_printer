@@ -8,13 +8,13 @@ endpoint associated with their unique ID.  Jobs can be queued by POSTing to
 the same endpoint.
 
 __Hint: check the debug output of the device or the sinatra logs to discover
-the IDs/URLs).__
+the IDs/URLs.__
 
 ## Further reading
 
-- (https://github.com/oesmith/a2_printer)[https://github.com/oesmith/a2_printer]
+- https://github.com/oesmith/a2_printer
   for formatting print jobs beyond simple ASCII text
-- (https://github.com/oesmith/printer_sketch)[https://github.com/oesmith/printer_sketch]
+- https://github.com/oesmith/printer_sketch
   for code to put on your Arduino
 
 ## Thanks
