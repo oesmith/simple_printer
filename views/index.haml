@@ -2,38 +2,23 @@
 %html
   %head
     %title Simple Printer
+    %style
+      ul { list-style-type: none; }
+      label { display: block; }
+      input { width: 500px; }
+      textarea { width: 500px; height: 300px; }
   %body
     %h1 Simple Printer
-    %p Use the form below to send a barcode to the printer.
+    %p Send London a message!
     %form{ :action => '', :method => 'post' }
       %fieldset
         %ul
           %li
-            %label{:for => 'id'} Printer ID
-            %input{:type => 'text', :name => 'id'}
-          %li
             %label{:for => 'title'} Title
             %input{:type => 'text', :name => 'title'}
           %li
-            %label{:for => 'subtitle'} Subtitle
-            %input{:type => 'text', :name => 'subtitle'}
-          %li
-            %label{:for => 'type'} Barcode type
-            %select{:name => 'type'}
-              %option{:value => '0'} UPC-A (11/12 character)
-              %option{:value => '1'} UPC-E (11/12 character)
-              %option{:value => '2'} EAN13 (12/13 character)
-              %option{:value => '3'} EAN8 (7/8 character)
-              %option{:value => '4'} CODE39
-              %option{:value => '5'} I25 (even number of characters)
-              %option{:value => '6'} CODEBAR
-              %option{:value => '7'} CODE93
-              %option{:value => '8'} CODE128
-              %option{:value => '9'} CODE11
-              %option{:value => '10'} MSI
-          %li
-            %label{:for => 'barcode'} Barcode data
-            %input{:type => 'text', :name => 'barcode'}
+            %label{:for => 'body'} Body
+            %textarea{:name => 'body'}
           %li
             %input{:type => 'submit'}
 

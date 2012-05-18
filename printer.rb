@@ -5,26 +5,24 @@ require 'a2_printer'
 
 redis = Redis.new
 
-get '/' do
+get '/post/:id' do
   haml :index
 end
 
-post '/' do
+post '/post/:id' do
   data = StringIO.new
   writer = A2Printer.new(data)
   writer.begin
   writer.set_default
   if params[:title]
-    writer.set_size :large
-    writer.print "#{params[:title]}\r\n"
-  end
-  if params[:subtitle]
-    writer.set_size :small
-    writer.print "#{params[:subtitle]}\r\n"
-  end
-  if params[:type] && params[:barcode]
+    writer.set_size :medium
+    writer.print "#{params[:title]}"
     writer.feed 1
-    writer.print_barcode params[:barcode], params[:type].to_i
+  end
+  if params[:body]
+    writer.set_size :small
+    writer.print "#{params[:body]}"
+    writer.feed 1
   end
   if params[:id]
     writer.feed 2
